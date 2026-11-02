@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #6244C5;
+  --color-primary-hover: #5034b0;
+  --color-secondary: #FFC448;
+  --color-light: #FAFAFB;
+  --color-dark: #12141D;
+  --color-text: #12141D;
+  --color-heading: #12141D;
+  --color-muted-text: #6B7280;
+  --color-button-text: #FFFFFF;
+  --color-body-bg: #FFFFFF;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-light: var(--color-light);
+  --color-dark: var(--color-dark);
+  --color-text: var(--color-text);
+  --color-heading: var(--color-heading);
+  --color-muted-text: var(--color-muted-text);
+  --color-button-text: var(--color-button-text);
+  --color-body-bg: var(--color-body-bg);
+  --font-sans: var(--font-open-sans), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-body-bg, #ffffff);
+  color: var(--color-text, #12141D);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading, #12141D);
+}
+
+.text-button-text {
+  color: var(--color-button-text, #ffffff) !important;
+}
+
+/* Custom Play Button Pulse Animation */
+@keyframes pulse-border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 1500ms ease-out infinite;
+  background-color: var(--color-primary, #6244C5);
+}
+
+/* Entrance & Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalPopOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-backdrop-fade {
+  animation: backdropFade 300ms ease-out forwards;
+}
+
+.animate-backdrop-out {
+  animation: backdropFadeOut 250ms ease-in forwards;
+}
+
+.animate-modal-pop {
+  animation: modalPop 350ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-modal-pop-out {
+  animation: modalPopOut 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-down-fade {
+  animation: slideDownFade 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Typed Cursor Animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typed-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 300;
+  animation: blink 0.8s infinite;
+  color: var(--color-heading, #12141D);
+}
+
+/* Custom Background Patterns */
+.bg-header-pattern {
+  background-image: url('/img/bg-header.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.bg-icon-pattern {
+  background-image: url('/img/bg-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary, #6244C5);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover, #5034b0);
+}
