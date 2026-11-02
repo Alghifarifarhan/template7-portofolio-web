@@ -1,4 +1,4 @@
-# 🌐 Modern Portfolio Website with Dynamic Admin CMS
+# 🌐 Template 7 - Modern Portfolio Website with Dynamic Admin CMS
 
 Website portofolio interaktif dan modern yang dibangun menggunakan **Next.js 15 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, dan **Google Firebase**. Dilengkapi dengan halaman **Admin CMS** dinamis untuk mengelola konten, palet tema warna, proyek, dan statistik pengunjung secara *real-time* tanpa perlu mengubah kode sumber.
 
@@ -149,31 +149,6 @@ Jika Anda belum memiliki proyek Firebase:
      ```
 4. **Perbarui file `.firebaserc`**:
    - Ganti `YOUR_FIREBASE_PROJECT_ID` pada `.firebaserc` dengan Project ID Firebase Anda.
-
----
-
-## 🏗️ Build dan Deploy ke Hosting
-
-### Build untuk Produksi
-Untuk mengekspor website menjadi file HTML/CSS/JS statis yang siap di-hosting:
-```bash
-npm run build
-```
-File hasil build akan berada di direktori `out/`.
-
-### Deploy ke Firebase Hosting
-1. Instal Firebase CLI secara global (jika belum):
-   ```bash
-   npm install -g firebase-tools
-   ```
-2. Login ke akun Google Firebase Anda:
-   ```bash
-   firebase login
-   ```
-3. Deploy website:
-   ```bash
-   firebase deploy
-   ```
 
 ---
 
